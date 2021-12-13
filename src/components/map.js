@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SearchBar from "./searchBar";
+import config from "./config";
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 
 export const MapContainer = (props) => {
@@ -66,5 +67,5 @@ export const MapContainer = (props) => {
 };
 
 export default GoogleApiWrapper({
-  apiKey: "AIzaSyDOK4QlDiX_mfTKfzekUWNeIvz9bQjLewk",
+  apiKey: config.SECRET_API_KEY,
 })(MapContainer);
